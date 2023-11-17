@@ -7,7 +7,7 @@ total_A_wins = 0
 total_B_wins = 0
 
 trials = 100000
-for trial in range(0, trials):
+for _ in range(0, trials):
     A_win = 0
     B_win = 0
     if random() < .87:  # 1st region

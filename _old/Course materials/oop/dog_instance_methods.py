@@ -14,7 +14,7 @@ class Dog(object):
 
     # instance method
     def speak(self, sound):
-        return "%s says %s" % (self.name, sound)
+        return f"{self.name} says {sound}"
 
 # Instantiate the Dog object
 mikey = Dog("Mikey", 6)

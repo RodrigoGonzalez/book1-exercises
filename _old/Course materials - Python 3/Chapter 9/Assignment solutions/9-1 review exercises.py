@@ -27,7 +27,7 @@ print(food)
 food.remove("cookies")
 
 # Display the first two items in the "food" list
-print(food[0:2])
+print(food[:2])
 
 # Create a "breakfast" list full of cookies and display it
 my_breakfast = "cookies, cookies, cookies"

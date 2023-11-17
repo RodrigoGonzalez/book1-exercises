@@ -14,9 +14,7 @@ def single_trial():
 
 
 def flip_trial_avg(num_trials):
-    total = 0
-    for trial in range(num_trials):
-        total += single_trial()
+    total = sum(single_trial() for _ in range(num_trials))
     return total / num_trials
 
 print("The average number of coin flips was {0}".format(flip_trial_avg(10000)))

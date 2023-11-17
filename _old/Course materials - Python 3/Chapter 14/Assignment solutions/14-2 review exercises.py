@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 # Get the full HTML from the "profiles" page
 base_URL = "https://realpython.com/practice/"
-address = base_URL + "profiles.html"
+address = f"{base_URL}profiles.html"
 html_page = urlopen(address)
 html_text = html_page.read().decode('utf-8')
 soup = BeautifulSoup(html_text)

@@ -2,17 +2,16 @@
 
 
 # Create an empty dictionary
-birthdays = {}
-
-# Add some key-value pairs to the dictionary
-birthdays["Luke Skywalker"] = "5/25/19"
-birthdays["Obi-Wan Kenobi"] = "3/11/57"
-birthdays["Darth Vader"] = "4/1/41"
+birthdays = {
+    "Luke Skywalker": "5/25/19",
+    "Obi-Wan Kenobi": "3/11/57",
+    "Darth Vader": "4/1/41",
+}
 
 # Check if "Yoda" and "Darth Vader exist; if not, add them
-if not "Yoda" in birthdays:
+if "Yoda" not in birthdays:
     birthdays["Yoda"] = "unknown"
-if not "Darth Vader" in birthdays:
+if "Darth Vader" not in birthdays:
     birthdays["Darth Vader"] = "unknown"
 
 ## Bonus points: you could instead loop over a list of names to check

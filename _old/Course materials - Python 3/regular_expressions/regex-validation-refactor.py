@@ -8,4 +8,4 @@ while not validation.search(email):
     print("Please enter your email address correctly!")
     email = input("Please enter your email address: ")
 
-print("\nYour email address is {}!".format(email))
+print(f"\nYour email address is {email}!")

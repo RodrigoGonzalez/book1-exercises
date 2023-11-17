@@ -25,7 +25,7 @@ class Dog(object):
 
     # instance method
     def speak(self, sound):
-        return "%s says %s" % (self.name, sound)
+        return f"{self.name} says {sound}"
 
     # instance method
     def eat(self):
@@ -35,13 +35,13 @@ class Dog(object):
 # child class (inherits from Dog() class)
 class RussellTerrier(Dog):
     def run(self, speed):
-        return "%s runs %s" % (self.name, speed)
+        return f"{self.name} runs {speed}"
 
 
 # child class (inherits from Dog() class)
 class Bulldog(Dog):
     def run(self, speed):
-        return "%s runs %s" % (self.name, speed)
+        return f"{self.name} runs {speed}"
 
 # create instances of dogs
 my_dogs = [Bulldog("Tom", 6), RussellTerrier("Fletcher", 7), Dog("Larry", 9)]

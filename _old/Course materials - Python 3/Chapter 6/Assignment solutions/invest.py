@@ -3,11 +3,11 @@
 
 
 def invest(amount, rate, time):
-    print("principal amount: ${}".format(amount))
+    print(f"principal amount: ${amount}")
     print("annual rate of return:", rate)
     for t in range(1, time + 1):
         amount = amount * (1 + rate)
-        print("year {}: ${}".format(t, amount))
+        print(f"year {t}: ${amount}")
     print()
 
 invest(100, .05, 8)

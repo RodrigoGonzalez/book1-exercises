@@ -55,7 +55,7 @@ def get_arguments():
 def is_valid_file(parser, file_name):
     """Ensure that the input_file exists."""
     if not os.path.exists(file_name):
-        parser.error("The file '{}' does not exist!".format(file_name))
+        parser.error(f"The file '{file_name}' does not exist!")
         sys.exit(1)
 
 
@@ -64,16 +64,13 @@ def is_valid_csv(parser, file_name, row_limit):
     Ensure that the # of rows in the input_file
     is greater than the row_limit.
     """
-    row_count = 0
-    for row in csv.reader(open(file_name)):
-        row_count += 1
+    row_count = len(csv.reader(open(file_name)))
     # Note: You could also use a generator expression
     # and the sum() function to count the rows:
     # row_count = sum(1 for row in csv.reader(open(file_name)))
     if row_limit > row_count:
         parser.error(
-            "The 'row_count' of '{}' is > the number of rows in '{}'!"
-            .format(row_limit, file_name)
+            f"The 'row_count' of '{row_limit}' is > the number of rows in '{file_name}'!"
         )
         sys.exit(1)
 

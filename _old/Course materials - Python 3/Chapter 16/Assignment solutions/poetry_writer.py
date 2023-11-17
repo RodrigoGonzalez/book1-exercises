@@ -79,18 +79,13 @@ def make_poem():
     # pull one adverb
     adv1 = choice(adverb)
 
-    if "aeiou".find(adj1[0]) != -1:  # first letter is a vowel
-        article = "An"
-    else:
-        article = "A"
-
-    # put it all together into a poem
-    poem = "{} {} {}\n\n".format(article, adj1, n1)
-    poem = poem + "{} {} {} {} {} the {} {}\n".format(
-        article, adj1, n1, v1, prep1, adj2, n2
+    article = "An" if adj1[0] in "aeiou" else "A"
+    poem = (
+        f"{article} {adj1} {n1}\n\n"
+        + f"{article} {adj1} {n1} {v1} {prep1} the {adj2} {n2}\n"
     )
-    poem = poem + "{}, the {} {}\n".format(adv1, n1, v2)
-    poem = poem + "the {} {} {} a {} {}".format(n2, v3, prep2, adj3, n3)
+    poem += f"{adv1}, the {n1} {v2}\n"
+    poem += f"the {n2} {v3} {prep2} a {adj3} {n3}"
 
     # place the resulting poem into the label
     result_poem.config(text=poem)
@@ -146,9 +141,8 @@ def save_file():
                                               defaultextension=".txt")
     print(file_name)
     if file_name != "":  # save file if user entered a file name
-        output_file = open(file_name, "w")
-        output_file.writelines(result_poem.cget("text"))
-        output_file.close()
+        with open(file_name, "w") as output_file:
+            output_file.writelines(result_poem.cget("text"))
 
 # create and add 'Save your poem' button
 btn_save = Button(frame, text="Save your poem", command=save_file)

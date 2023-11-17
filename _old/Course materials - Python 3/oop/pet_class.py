@@ -25,7 +25,7 @@ class Dog():
 
     # instance method
     def speak(self, sound):
-        return "%s says %s" % (self.name, sound)
+        return f"{self.name} says {sound}"
 
     # instance method
     def eat(self):
@@ -35,13 +35,13 @@ class Dog():
 # child class (inherits from Dog() class)
 class RussellTerrier(Dog):
     def run(self, speed):
-        return "%s runs %s" % (self.name, speed)
+        return f"{self.name} runs {speed}"
 
 
 # child class (inherits from Dog() class)
 class Bulldog(Dog):
     def run(self, speed):
-        return "%s runs %s" % (self.name, speed)
+        return f"{self.name} runs {speed}"
 
 # create instances of dogs
 my_dogs = [Bulldog("Tom", 6), RussellTerrier("Fletcher", 7), Dog("Larry", 9)]
@@ -50,11 +50,11 @@ my_dogs = [Bulldog("Tom", 6), RussellTerrier("Fletcher", 7), Dog("Larry", 9)]
 my_pets = Pet(my_dogs)
 
 # output
-print("I have {} dogs.".format(len(my_pets.dogs))),
+(print(f"I have {len(my_pets.dogs)} dogs."), )
 for dog in my_pets.dogs:
     dog.eat()
-    print("{} is {}.".format(dog.name, dog.age)),
-print("And they're all {}s, of course.".format(dog.species)),
+    (print(f"{dog.name} is {dog.age}."), )
+(print(f"And they're all {dog.species}s, of course."), )
 if dog.is_hungry is True:
     print("My dogs are hungry.")
 else:

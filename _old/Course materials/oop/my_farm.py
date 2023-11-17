@@ -11,7 +11,7 @@ class Animal(object):
 
     # instance methods
     def talk(self):
-        return "Hello. I'm {}".format(self.name)
+        return f"Hello. I'm {self.name}"
 
     def walk(self, walk_increment):
         self.position += walk_increment
@@ -23,16 +23,13 @@ class Animal(object):
 
     def feed(self):
         self.stuff_in_belly += 1
-        if self.stuff_in_belly > 3:
-            return self.poop()
-        else:
-            return "{} is eating.".format(self.name)
+        return self.poop() if self.stuff_in_belly > 3 else f"{self.name} is eating."
 
     def hungry(self):
         if self.stuff_in_belly < 2:
-            return "{} is hungry".format(self.name)
+            return f"{self.name} is hungry"
         else:
-            return "{} is not hungry".format(self.name)
+            return f"{self.name} is not hungry"
 
     def poop(self):
         self.stuff_in_belly == 0
@@ -45,7 +42,7 @@ class Dog(Animal):
         return "Bark! Bark!"
 
     def fetch(self):
-        return "{} is fetching.".format(self.name)
+        return f"{self.name} is fetching."
 
 
 class Sheep(Animal):

@@ -14,8 +14,7 @@ philo = Dog("Philo", 5)
 mikey = Dog("Mikey", 6)
 
 # Access the instance attributes
-print("{} is {} and {} is {}.".format(
-    philo.name, philo.age, mikey.name, mikey.age))
+print(f"{philo.name} is {philo.age} and {mikey.name} is {mikey.age}.")
 
 # Is Philo a mammal?
 if philo.species == "mammal":

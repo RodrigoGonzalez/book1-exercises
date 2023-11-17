@@ -4,9 +4,9 @@ import random
 
 def capital_game(state, capital):
     while True:
-        guess = input("What is the capital of '{}'? ".format(state)).lower()
+        guess = input(f"What is the capital of '{state}'? ").lower()
         if guess == "exit":
-            print("The capital of '{}' is '{}'.".format(state, capital))
+            print(f"The capital of '{state}' is '{capital}'.")
             print("Goodbye")
             break
         elif guess == (capital).lower():

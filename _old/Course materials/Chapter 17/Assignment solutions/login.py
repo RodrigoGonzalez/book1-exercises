@@ -9,11 +9,7 @@ import webapp2
 class MainPage(webapp2.RequestHandler):
     def get(self):
         username = self.request.get("myName")
-        if username == "":
-            welcomeString = ""
-        else:
-            welcomeString = "Hi there, {}!".format(username)
-
+        welcomeString = "" if username == "" else f"Hi there, {username}!"
         self.response.headers["Content-Type"] = "text/html"
         self.response.write("""
           <html>

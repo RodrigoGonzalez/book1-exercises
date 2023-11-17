@@ -67,18 +67,13 @@ def make_poem(nouns, verbs, adjectives, adverbs, prepositions):
     # Pull one adverb
     adv1 = choice(adverb)
 
-    if "aeiou".find(adj1[0]) != -1:  # first letter is a vowel
-        article = "An"
-    else:
-        article = "A"
-
-    # add lines to poem
-    poem = "{} {} {}<br /><br />".format(article, adj1, n1)
-    poem = poem + "{} {} {} {} {} the {} {}<br />".format(
-        article, adj1, n1, v1, prep1, adj2, n2
+    article = "An" if adj1[0] in "aeiou" else "A"
+    poem = (
+        f"{article} {adj1} {n1}<br /><br />"
+        + f"{article} {adj1} {n1} {v1} {prep1} the {adj2} {n2}<br />"
     )
-    poem = poem + "{}, the {} {}<br />".format(adv1, n1, v2)
-    poem = poem + "the {} {} {} a {} {}".format(n2, v3, prep2, adj3, n3)
+    poem += f"{adv1}, the {n1} {v2}<br />"
+    poem += f"the {n2} {v3} {prep2} a {adj3} {n3}"
     return poem
 
 

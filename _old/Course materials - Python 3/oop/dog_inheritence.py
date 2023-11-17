@@ -15,19 +15,19 @@ class Dog():
 
     # instance method
     def speak(self, sound):
-        return "%s says %s" % (self.name, sound)
+        return f"{self.name} says {sound}"
 
 
 # child class (inherits from Dog() class)
 class RussellTerrier(Dog):
     def run(self, speed):
-        return "%s runs %s" % (self.name, speed)
+        return f"{self.name} runs {speed}"
 
 
 # child class (inherits from Dog() class)
 class Bulldog(Dog):
     def run(self, speed):
-        return "%s runs %s" % (self.name, speed)
+        return f"{self.name} runs {speed}"
 
 
 # child classes inherit attributes and

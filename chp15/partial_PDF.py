@@ -64,6 +64,5 @@ output_PDF = PdfFileWriter()
 for page_num in range(int(page_start) - 1, int(page_end)):
     page = input_file.getPage(page_num)
     output_PDF.addPage(page)
-output_file = open(output_file_name, "wb")
-output_PDF.write(output_file)
-output_file.close()
+with open(output_file_name, "wb") as output_file:
+    output_PDF.write(output_file)

@@ -19,17 +19,17 @@ x, y, seven = days
 # DO NOT CHANGE ANYTHING BELOW THIS LINE #
 # -------------------------------------- #
 
-print("zero:  {}".format(zero == 0))
-print("one:   {}".format(one > 22))
-print("two:   {}".format(len(two) == 5))
-print("three: {}".format(three[2] == "Python!"))
-print("four:  {}".format(
-    four[0][5] == 'n' and four[0][0] == "P" and four[2][1] == "u")
+print(f"zero:  {zero == 0}")
+print(f"one:   {one > 22}")
+print(f"two:   {len(two) == 5}")
+print(f'three: {three[2] == "Python!"}')
+print(
+    f"""four:  {four[0][5] == 'n' and four[0][0] == "P" and four[2][1] == "u"}"""
 )
-print("five:  {}".format(five.get("fish") == "chips"))
-print("five:  {}".format(len(five) == 3))
-print("six:   {}".format(len(six & {2, 5, 7}) == 2))
-print("seven: {}".format(seven == "Wed"))
+print(f'five:  {five.get("fish") == "chips"}')
+print(f"five:  {len(five) == 3}")
+print(f"six:   {len(six & {2, 5, 7}) == 2}")
+print(f'seven: {seven == "Wed"}')
 
 # -------------------------------------- #
 
@@ -48,7 +48,7 @@ else:
     print(False)
 
 for x in value:
-    if not type(x) is int:
+    if type(x) is not int:
         print(False)
     else:
         print(True)

@@ -3,8 +3,7 @@
 
 def cube(num):
     ''' Returns the cube of the input number '''
-    cube_num = num * num * num
-    return cube_num
+    return num * num * num
 
 print "0 cubed is", cube(0)
 print "2 cubed is", cube(2)
